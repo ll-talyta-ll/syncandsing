@@ -1,0 +1,59 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="perfil.css" rel="stylesheet" type="text/css" />
+  <title>Crie sua conta</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <font color="white">
+<form name="form-users" id="formUsers" method="post" action="/store/">
+  <div class="col-6 mt-4 m-auto">
+    <div class="alert {{class}}">
+      </div>
+            <!--Criando campos para inserção dos dados dos usuarios -->
+        <h1 class="title">Cadastre seu perfil</h1>
+        Nome do usuario:
+        <input class="form-control mt-4" type="text" name="userID" id="userID" required>
+        <br> 
+        <br>
+        Senha:
+        <input type="password" name="psw" required>
+        <br> 
+        <br>
+        Data de nascimento: 
+        <input type="number" name="dia" maxlength="2" placeholder="dd"> 
+        <input type="number" name="mes" maxlength="2" placeholder="mm"> 
+        <input type="number" name="ano" maxlength="4" placeholder="aaaa">
+        <br>  
+        <br>
+        Genero:
+        <select name="genero" required>
+          <option value="genero" selected disabled hidden>Selecione</option>
+          <option value="genero">Feminino</option>
+          <option value="genero">Masculino</option>
+          <option value="genero">Não-Binário</option>
+          <option value="genero">Outros</option>
+          <option value="genero">Prefiro não responder</option>
+        </select>
+        <br> 
+        <br> 
+        Relacionamento:
+        <select name="relacionamento" required>
+          <option value="relacionamento" selected disabled hidden>Selecione</option>
+          <option value="relacionamento">Romance</option>
+          <option value="relacionamento">Amizade</option>
+          <option value="relacionamento">Trabalho</option>
+          <option value="relacionamento">Outros</option>
+          <option value="relacionamento">Prefiro não responder</option>
+        </select>
+        <br> 
+        <br> 
+        
+  </div>
+</form>
+
+<form action="perfil.html">
+  <input type="submit" value="Criar perfil" />
+</form>

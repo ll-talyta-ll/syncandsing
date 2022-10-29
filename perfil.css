@@ -1,0 +1,30 @@
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color:#F1F1F1;
+  }
+}
+ */
+body {
+  margin: 50;
+  background-color:#210817;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  /*text-transform: uppercase; */
+  font-family: 'Georgia', sans-serif;
+}
+
+.title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

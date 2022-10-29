@@ -1,0 +1,70 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="perfil.css" rel="stylesheet" type="text/css" />
+  <title>Editar perfil</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <font color="white">
+<form name="form-users" id="formUsers" method="post" action="/store/">
+  <div class="col-6 mt-4 m-auto">
+    <div class="alert {{class}}">
+      </div>
+            <!--Criando campos para inserção dos dados dos usuarios -->
+        <h1 class="title">Editar perfil</h1>
+        Nome:
+        <input class="form-control mt-4" type="text" name="nome" id="nome" required>
+        <br> 
+        <br>
+        Biografia:
+        <br>
+        <input class="form-control mt-4" style="width: 300px;height: 50px;" cols="40" rows="6" type="text" name="biografia" id="biografia">
+        <br> 
+        <br>
+        Músicas:
+        <br>
+        <input class="form-control mt-4" style="width: 300px;height: 50px;" type="text" name="musicas" id="musicas" placeholder="Escreva aqui 10 das suas músicas favoritas" required>
+        <br> 
+        <br> 
+        Gênero:
+        <select name="gênero" required>
+          <option value="gênero" selected disabled hidden>Selecione</option>
+          <option value="gênero">Feminino</option>
+          <option value="gênero">Masculino</option>
+          <option value="gênero">Não-Binário</option>
+          <option value="gênero">Outros</option>
+          <option value="gênero">Prefiro não responder</option>
+        </select>
+        <br> 
+        <br> 
+        Localização:
+        <input class="form-control mt-4" type="text" name="localizacao" id="localizacao">
+        <br> 
+        <br> 
+        Data de nascimento: 
+        <input type="number" name="dia" maxlength="2" placeholder="dd" required> 
+        <input type="number" name="mes" maxlength="2" placeholder="mm" required> 
+        <input type="number" name="ano" maxlength="4" placeholder="aaaa" required>
+        <br>  
+        <br>
+        Relacionamento:
+        <select name="relacionamento" required>
+          <option value="relacionamento" selected disabled hidden>Selecione</option>
+          <option value="relacionamento">Romance</option>
+          <option value="relacionamento">Amizade</option>
+          <option value="relacionamento">Trabalho</option>
+          <option value="relacionamento">Outros</option>
+          <option value="relacionamento">Prefiro não responder</option>
+        </select>
+        <br> 
+        <br> 
+    </form>
+
+    <form action="index.html">
+      <input type="submit" value="Salvar informações" />
+    </form>
+  </div>
+  </div>
+</body>
