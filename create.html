@@ -1,8 +1,85 @@
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
   <link href="perfil.css" rel="stylesheet" type="text/css" />
   <title>Crie sua conta</title>
+
+  <style>
+  body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: linear-gradient(to right, rgb(72,61,139), rgb(131,111,255)); 
+  }
+  .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 18px;
+        border-radius: 15px;
+        width: 40%;
+  }
+    fieldset{
+        border: 3px solid dodgerblue;
+    }
+    legend{
+        border: 1px solid dodgerblue;
+        padding: 15px;
+        text-align: center;
+        background-color; dodgerblue;
+        border-radius: 8px;
+        color: white;
+        font-size: 25px;
+    }
+    .inputBox{
+      position: relative;
+    }
+    .inputUser{
+      background: none;
+      border: none;
+      border-bottom: 1px solid white;
+      outline: none;
+      color: white;
+      font-size: 20px;
+      width: 100%;
+    }
+    .labelInput{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      pointer-events: none;
+      transition: .5s;
+    }
+    .inputUser:focus ~ .labelInput,
+    .inputUser:valid ~.labelInput{
+        top: -10px;
+        font-size: 20px;
+        color: dodgerblue;
+    }
+    #data_nascimento{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 20px;
+    }
+     #genero{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 20px;
+    }
+    #submit{
+       background-image: linear-gradient(to right, rgb(0, 0, 255), rgb(25, 25, 112));
+       width: 100%;
+       border: none;
+       padding: 15px;
+       color: white;
+       font-size: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -13,23 +90,39 @@
     <div class="alert {{class}}">
       </div>
             <!--Criando campos para inserção dos dados dos usuarios -->
-        <h1 class="title">Cadastre seu perfil</h1>
-        Nome de Usuário:
-        <input class="form-control mt-4" type="text" name="userID" id="userID" required>
+        <fieldset>
+            <legend><b>Cadastre seu perfil</b></legend>
+        <br> 
+        <br> 
+        <div class="inputBox">
+        <input type="text" name="userID" id="userID" class="inputUser" required>
+        <label for="userID" class="labelInput">Nome de Usuário:</label> 
         <br> 
         <br>
-        Senha:
-        <input type="password" name="psw" required>
+        <br> 
+        <br> 
+        </div>
+        <div class="inputBox">
+        <input type="password" name="psw" id="psw" class="inputUser" required>
+        <label for="psw" class="labelInput">Crie uma senha:</label> 
         <br> 
         <br>
+        <br> 
+        <br> 
+        </div>
         Data de nascimento: 
+        <label for="data_nascimento" id="data_nascimento" required>
+        <input type= "date" name="data_nascimento" id="data_nascimento" required>
+          <!--Data de nascimento: 
         <input type="number" name="dia" maxlength="2" placeholder="dd"> 
         <input type="number" name="mes" maxlength="2" placeholder="mm"> 
-        <input type="number" name="ano" maxlength="4" placeholder="aaaa">
+        <input type="number" name="ano" maxlength="4" placeholder="aaaa"> -->
         <br>  
         <br>
+        <br> 
+        <br> 
         Gênero:
-        <select name="gênero" required>
+        <select name="genero" required>
           <option value="genero" selected disabled hidden>Selecione</option>
           <option value="genero">Feminino</option>
           <option value="genero">Masculino</option>
@@ -39,14 +132,14 @@
         </select>
         <br> 
         <br> 
-        Relacionamento:
+        Selecione o tipo de relacionamento que procura:
         <select name="relacionamento" required>
-          <option value="relacionamento" selected disabled hidden>Selecione</option>
+          <option value="relacionamento" selected disabled                hidden>Selecione</option>
           <option value="relacionamento">Romance</option>
           <option value="relacionamento">Amizade</option>
           <option value="relacionamento">Trabalho</option>
           <option value="relacionamento">Outros</option>
-          <option value="relacionamento">Prefiro não responder</option>
+          <option value="relacionamento">Prefiro não        responder</option>
         </select>
         <br> 
         <br> 
@@ -55,5 +148,6 @@
 </form>
 
 <form action="perfil.html">
-  <input type="submit" value="Criar perfil" />
+  <input type="submit" name="submit" id="submit" />
+        </fieldset>
 </form>
