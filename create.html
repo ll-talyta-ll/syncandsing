@@ -29,7 +29,7 @@
         text-align: center;
         background-color; dodgerblue;
         border-radius: 8px;
-        color: white;
+        color: violet;
         font-size: 25px;
     }
     .inputBox{
@@ -39,7 +39,6 @@
       background: none;
       border: none;
       border-bottom: 1px solid white;
-      outline: none;
       color: white;
       font-size: 15px;
       width: 100%;
@@ -55,7 +54,7 @@
     .inputUser:valid ~.labelInput{
         top: -30px;
         font-size: 20px;
-        color: dodgerblue;
+        color: violet;
     }
     #data_nascimento{
         border: none;
@@ -71,8 +70,14 @@
         outline: none;
         font-size: 20px;
     }
+    #useremail{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
     #submit{
-       background-image: linear-gradient(to right, rgb(0, 0, 255), rgb(25, 25, 112));
+       background-image: linear-gradient(to right, rgb(139,0,139), rgb(139,0,139));
        width: 100%;
        border: none;
        padding: 15px;
@@ -91,7 +96,7 @@
       </div>
             <!--Criando campos para inserção dos dados dos usuarios -->
         <fieldset>
-            <legend><b>Cadastre seu perfil</b></legend>
+            <legend><b>Crie sua conta</b></legend>
         <br> 
         <br> 
         <div class="inputBox">
@@ -121,8 +126,17 @@
         <br>
         <br> 
         <br> 
+        <div class="inputBox">  
+        <input type="email" name="useremail" id="useremail" class="inputUser" required>
+        <label for="useremail" class="labelInput">Insira o email:</label> 
+          <br>
+          <br>
+          <br>
         Gênero:
         <select name="genero" required>
+          <br>
+          <br>
+          <br>
           <option value="genero" selected disabled hidden>Selecione</option>
           <option value="genero">Feminino</option>
           <option value="genero">Masculino</option>
@@ -149,5 +163,5 @@
 
 <form action="perfil.html">
   <input type="submit" name="submit" id="submit" />
-        </fieldset>
+ <fieldset>
 </form>
