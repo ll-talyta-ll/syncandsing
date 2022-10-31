@@ -1,30 +1,120 @@
-<head>
+ <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
-  <link href="index.css" rel="stylesheet" type="text/css" />
+  <link href="perfil.css" rel="stylesheet" type="text/css" />
   <title>Entre na sua conta</title>
 </head>
-
+ <style>
+  body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: linear-gradient(to right, rgb(75,0,130), rgb(75,0,130)); 
+  }
+  .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        border-radius: 15px;
+        width: 50%;
+  }
+    fieldset{
+        border: 3px solid hotpink;
+    }
+    legend{
+        border: 1px solid dodgerblue;
+        padding: 15px;
+        text-align: center;
+        background-color; dodgerblue;
+        border-radius: 8px;
+        color: violet;
+        font-size: 25px;
+    }
+    .inputBox{
+      position: relative;
+    }
+    .inputUser{
+      background: none;
+      border: none;
+      border-bottom: 1px solid white;
+      color: white;
+      font-size: 15px;
+      width: 100%;
+    }
+    .labelInput{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      pointer-events: none;
+      transition: .5s;
+    }
+    .inputUser:focus ~ .labelInput,
+    .inputUser:valid ~.labelInput{
+        top: -30px;
+        font-size: 20px;
+        color: violet;
+    }
+    #submit{
+       background-image: linear-gradient(to right, rgb(139,0,139), rgb(139,0,139));
+       width: 100%;
+       border: none;
+       padding: 15px;
+       color: indigo;
+       font-size: 18px;
+    }
+  </style>
+</head>
 <body>
-  <form action="action_page.php" method="post">
-  <div class="box">
-    <font color="white">
-    <h1 class="title">Entre na sua conta</h1>
-    <label for="uname"><b>Usuário:</b></label>
-    <input type="text" placeholder="Usuario" name="uname" required>
-    <br>
-    <label for="psw"><b>Senha:</b></label>
-    <input type="password" placeholder="Senha" name="psw" required>
-    <br>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Lembrar senha
-    </label>
-    <br>
-    <button type="submit">Login</button>
-    <br>
-    <br>
-    <span class= "criar"> <a href="create.html">Não tenho conta</a></span>
+  <div class="container">
+    <!-- <form action="action_page.php" method="post"> -->
+    <div class="box">
+      <font color="white">
+<form name="form-users" id="formUsers" method="post" action="/store/">
+  <div class="col-6 mt-4 m-auto">
+    <div class="alert {{class}}">
+      </div>
+            <!--Criando campos para inserção dos dados dos usuarios -->
+        <fieldset>
+            <legend><b>Entre na sua conta</b></legend>
+        <br> 
+        <br> 
+          <div class="inputBox">  
+        <input type="email" name="useremail" id="useremail" class="inputUser" required>
+        <label for="useremail" class="labelInput">Insira o email:</label> 
+          <br>
+          <br>
+          <br>
+          <br>
+         <div class="inputBox">
+         <input type="text" name="userID" id="userID" class="inputUser" required>
+         <label for="userID" class="labelInput">Nome de Usuário:</label> 
+         <br> 
+         <br>
+         <br> 
+         <br> 
+        </div>
+        <div class="inputBox">
+        <input type="password" name="psw" id="psw" class="inputUser" required>
+        <label for="psw" class="labelInput">Digite sua senha:</label> 
+        <br>
+        <br>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Lembrar senha
+        </label>
+        <br>
+        <br>
+        <span class= "criar"> <a href="create.html">Clique aqui caso não tenha uma conta ainda!</a></span>
+        <br> 
+        <br>
+        <br> 
+        <br> 
+        </div>
   </div>
-</form> 
-</body>
-  
+</form>
+
+<form action="perfil.html">
+  <input type="submit" name="submit" id="submit" />
+ <fieldset>
+</form>
