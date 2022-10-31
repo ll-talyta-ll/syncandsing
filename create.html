@@ -74,7 +74,7 @@
        background-image: linear-gradient(to right, rgb(139,0,139), rgb(139,0,139));
        width: 100%;
        border: none;
-       padding: 8px;
+       padding: 10px;
        color: indigo;
        font-size: 20px;
     }
@@ -115,9 +115,12 @@
           <br>
           <br>
         </div>
+        <form>
         Data de nascimento: 
         <label for="data_nascimento" id="data_nascimento" required>
-        <input type= "date" name="data_nascimento" id="data_nascimento" required>
+        <input type= "date" class="form-control" name="data_nascimento" id="data_nascimento" max="2004-10-31" required>
+        <input type="submit"/>
+        </form>
         <br>  
         <br>
         <br> 
