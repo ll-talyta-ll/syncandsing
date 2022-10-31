@@ -1,8 +1,84 @@
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
   <link href="perfil.css" rel="stylesheet" type="text/css" />
-  <title>Editar perfil</title>
+  <title>Editar Perfil</title>
+
+  <style>
+  body{
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: linear-gradient(to right, rgb(75,0,130), rgb(75,0,130)); 
+  }
+  .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        border-radius: 15px;
+        width: 50%;
+  }
+    fieldset{
+        border: 3px solid hotpink;
+    }
+    legend{
+        border: 1px solid dodgerblue;
+        padding: 15px;
+        text-align: center;
+        background-color; dodgerblue;
+        border-radius: 8px;
+        color: violet;
+        font-size: 25px;
+    }
+    .inputBox{
+      position: relative;
+    }
+    .inputUser{
+      background: none;
+      border: none;
+      border-bottom: 1px solid white;
+      color: white;
+      font-size: 15px;
+      width: 100%;
+    }
+    .labelInput{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      pointer-events: none;
+      transition: .5s;
+    }
+    .inputUser:focus ~ .labelInput,
+    .inputUser:valid ~.labelInput{
+        top: -30px;
+        font-size: 20px;
+        color: violet;
+    }
+    #data_nascimento{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 15px;
+    }
+     #genero{
+        border: none;
+        padding: 8px;
+        border-radius: 6px;
+        outline: none;
+        font-size: 10px;
+     }
+    #submit{
+       background-image: linear-gradient(to right, rgb(139,0,139), rgb(139,0,139));
+       width: 100%;
+       border: none;
+       padding: 10px;
+       color: indigo;
+       font-size: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -13,58 +89,80 @@
     <div class="alert {{class}}">
       </div>
             <!--Criando campos para inserção dos dados dos usuarios -->
-        <h1 class="title">Editar perfil</h1>
-        Nome:
-        <input class="form-control mt-4" type="text" name="nome" id="nome" required>
-        <br> 
-        <br>
-        Biografia:
-        <br>
-        <input class="form-control mt-4" style="width: 300px;height: 50px;" cols="40" rows="6" type="text" name="biografia" id="biografia">
-        <br> 
-        <br>
-        Músicas:
-        <br>
-        <input class="form-control mt-4" style="width: 300px;height: 50px;" type="text" name="musicas" id="musicas" placeholder="Escreva aqui 10 das suas músicas favoritas" required>
+        <fieldset>
+            <legend><b>Crie seu Perfil</b></legend>
         <br> 
         <br> 
+        <div class="inputBox">
+        <input type="text" name="userID" id="userID" class="inputUser" required>
+        <label for="userID" class="labelInput">Nome de Usuário:</label> 
+        <br> 
+        <br>
+        <br> 
+        </div>
+        <form>
+        Data de nascimento: 
+        <label for="data_nascimento" id="data_nascimento" required>
+        <input type= "date" class="form-control" name="data_nascimento" id="data_nascimento" max="2004-10-31" required>
+        </form>
+        <br>  
+        <br>
+        <br> 
+          <!--Data de nascimento: 
+        <input type="number" name="dia" maxlength="2" placeholder="dd"> 
+        <input type="number" name="mes" maxlength="2" placeholder="mm"> 
+        <input type="number" name="ano" maxlength="4" placeholder="aaaa"> -->
+          
         Gênero:
-        <select name="gênero" required>
-          <option value="gênero" selected disabled hidden>Selecione</option>
-          <option value="gênero">Feminino</option>
-          <option value="gênero">Masculino</option>
-          <option value="gênero">Não-Binário</option>
-          <option value="gênero">Outros</option>
-          <option value="gênero">Prefiro não responder</option>
+        <select name="genero" required>
+          <br>
+          <br>
+          <br>
+          <option value="genero" selected disabled hidden>Selecione</option>
+          <option value="genero">Feminino</option>
+          <option value="genero">Masculino</option>
+          <option value="genero">Não-Binário</option>
+          <option value="genero">Outros</option>
+          <option value="genero">Prefiro não responder</option>
         </select>
         <br> 
         <br> 
-        Localização:
-        <input class="form-control mt-4" type="text" name="localizacao" id="localizacao">
-        <br> 
-        <br> 
-        Data de nascimento: 
-        <input type="number" name="dia" maxlength="2" placeholder="dd" required> 
-        <input type="number" name="mes" maxlength="2" placeholder="mm" required> 
-        <input type="number" name="ano" maxlength="4" placeholder="aaaa" required>
-        <br>  
         <br>
-        Relacionamento:
+        <br>
+        Selecione o tipo de relacionamento que procura:
+        <label for="relacionamento" id="relacionamento" required>
         <select name="relacionamento" required>
-          <option value="relacionamento" selected disabled hidden>Selecione</option>
+          <option value="relacionamento" selected disabled                hidden>Selecione</option>
           <option value="relacionamento">Romance</option>
           <option value="relacionamento">Amizade</option>
           <option value="relacionamento">Trabalho</option>
           <option value="relacionamento">Outros</option>
-          <option value="relacionamento">Prefiro não responder</option>
+          <option value="relacionamento">Prefiro não        responder</option>
         </select>
         <br> 
         <br> 
-    </form>
-
-    <form action="index.html">
-      <input type="submit" value="Salvar informações" />
-    </form>
+        <br>
+        <br>
+        <div class="inputBox">
+        <input type="text" name="biografia" id="biografia" class="inputUser" style="width: 300px;height: 50px;" cols="40" rows="6" required>
+        <label for="biografia" class="labelInput">Escreva sua biografia:</label>
+        <br>
+        <br>
+        <br>
+        <div class="inputBox">
+        <input type="text" name="music" id="music" class="inputUser" placeholder="Escreva aqui 10 das suas músicas favoritas" style="width: 300px;height: 50px;" cols="40" rows="6" required>
+        <label for="music" class="labelInput"></label>
+        <br>
+        <br> 
+        <br> 
+        <br>
+        <div class="inputBox">
+        <input type="text" name="locale" id="locale" class="inputUser" style="width: 300px;height: 50px;" cols="40" rows="6" required>
+        <label for="locale" class="labelInput">Insira sua localização</label>
+        <br> 
+        <br>  
   </div>
-  </div>
-</body>
+<form action="index.html">
+       <input type="submit" name="submit" id="submit" value="Salvar informações" />
+        <fieldset>
+</form>
