@@ -2,20 +2,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
-  <link href="perfil.css" rel="stylesheet" type="text/css" />
+  <link href="perfil.css" rel="stylesheet" type="text/css" /> 
   <title>Editar Perfil</title>
 
   <style>
   body{
       font-family: Arial, Helvetica, sans-serif;
-      background-image: linear-gradient(to right, rgb(75,0,130), rgb(75,0,130)); 
+      background-color: #1f0c29; 
   }
   .box {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.1);
         padding: 30px;
         border-radius: 15px;
         width: 50%;
@@ -71,8 +71,16 @@
         font-size: 10px;
      }
     #submit{
-       background-image: linear-gradient(to right, rgb(139,0,139), rgb(139,0,139));
+       background-color: #a17d9f;
        width: 100%;
+       border: none;
+       padding: 10px;
+       color: indigo;
+       font-size: 20px;
+    }
+     .voltar{
+       background-color: #a17d9f;
+       width: 30px
        border: none;
        padding: 10px;
        color: indigo;
@@ -80,34 +88,39 @@
     }
   </style>
 </head>
-<body>
+
+ <!--<input class="voltar" type="button" value="Voltar" onClick="history.go(-1)"> 
+<body> 
+  <!-->
+   <!--<a href="index3.html" target="_blank">
+Pagina dos matches</a> -->
   <div class="container">
+    
     <div class="box">
       <font color="white">
-<form name="form-users" id="formUsers" method="post" action="/store/">
+ <form name="form-users" id="formUsers" method="post" action="/store/"> 
   <div class="col-6 mt-4 m-auto">
     <div class="alert {{class}}">
       </div>
             <!--Criando campos para inserção dos dados dos usuarios -->
         <fieldset>
-            <legend><b>Crie seu Perfil</b></legend>
+            <legend><b>Editar perfil</b></legend>
         <br> 
         <br> 
         <div class="inputBox">
         <input type="text" name="userID" id="userID" class="inputUser" required>
         <label for="userID" class="labelInput">Nome de Usuário:</label> 
         <br> 
-        <br>
         <br> 
         </div>
         <form>
         Data de nascimento: 
         <label for="data_nascimento" id="data_nascimento" required>
-        <input type= "date" class="form-control" name="data_nascimento" id="data_nascimento" max="2004-10-31" required>
+        <input type= "date" class="form-control" name="data_nascimento" id="data_nascimento" max="2004-11-20" required>
         </form>
         <br>  
-        <br>
         <br> 
+        <br>
           <!--Data de nascimento: 
         <input type="number" name="dia" maxlength="2" placeholder="dd"> 
         <input type="number" name="mes" maxlength="2" placeholder="mm"> 
@@ -128,7 +141,6 @@
         <br> 
         <br> 
         <br>
-        <br>
         Selecione o tipo de relacionamento que procura:
         <label for="relacionamento" id="relacionamento" required>
         <select name="relacionamento" required>
@@ -142,7 +154,6 @@
         <br> 
         <br> 
         <br>
-        <br>
         <div class="inputBox">
         <input type="text" name="biografia" id="biografia" class="inputUser" style="width: 300px;height: 50px;" cols="40" rows="6" required>
         <label for="biografia" class="labelInput">Escreva sua biografia:</label>
@@ -150,19 +161,34 @@
         <br>
         <br>
         <div class="inputBox">
-        <input type="text" name="music" id="music" class="inputUser" placeholder="Escreva aqui 10 das suas músicas favoritas" style="width: 300px;height: 50px;" cols="40" rows="6" required>
+       <input type="text" name="music" id="music" class="inputUser" placeholder="Escreva aqui 10 das suas músicas favoritas" style="width: 300px;height: 50px;" cols="40" rows="6" required>
+          Escolha 10 das músicas disponíveis:
+          <br>
+        <select placeholder="Escolha 10 das músicas disponíveis" multiple>
+        <!-- <option value="1">34+35 - Ariana Grande</option>
+         <option value="2">ACORDA PEDRINHO - Jovem Dionisio</option>
+          <option value="3">Another Place - Bastille</option>
+          <option value="4">Apesar de Querer - Rodrigo Alarcon</option>
+          <option value="5">As it was - Harry Styles</option>
+          <option value="6">Blur - Imagine Dragons</option>
+          <option value="7">Buzzkill - Baby Queen</option> -->
+
+        </select>
         <label for="music" class="labelInput"></label>
         <br>
-        <br> 
         <br> 
         <br>
         <div class="inputBox">
         <input type="text" name="locale" id="locale" class="inputUser" style="width: 300px;height: 50px;" cols="40" rows="6" required>
-        <label for="locale" class="labelInput">Insira sua localização</label>
+        <label for="locale" class="labelInput">Escreva sua localização</label>
         <br> 
         <br>  
   </div>
-<form action="index.html">
-       <input type="submit" name="submit" id="submit" value="Salvar informações" />
-        <fieldset>
+<!--<form action="index3.html">
+      <a href='/index3.html'> -->
+      <form action="paginamatches.html">
+       <input type="submit" name="submit" id="submit" value="Salvar informações" <a class="cabecalho-menu-seuKleber" <form action="paginamatches.html" href="https://ll-talyta-ll.github.io/syncandsing/paginamatches.html"</form</a> />
+      <!--<form action="index3.html">
+        <input type="submit" name="submit" id -->
+      </fieldset>
 </form>
