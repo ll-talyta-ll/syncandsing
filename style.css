@@ -120,10 +120,11 @@ body {
 }
 
 .rodape-imagem {
-  height: 250px;
+  height: 400px;
   display: flex;
   margin: 0 auto;
   list-style: none;
+  width: 100%;
   justify-content: space-around;
 }
 .gif {
