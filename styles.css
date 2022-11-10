@@ -8,7 +8,7 @@ body {
 	height: 100vh;
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
-	background: #4B0082;
+	background: linear-gradient(rgb(75,0,130), rgb(128,0,128));;
 }
 
 /* Navbar */
