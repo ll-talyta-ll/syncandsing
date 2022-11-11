@@ -9,7 +9,7 @@
 
 body {
   font-size: 100%;
-  background: linear-gradient(rgb(75,0,130), rgb(128,0,128));
+	background: #201b2c;
 }
 .cabecalho {
   display: flex;
