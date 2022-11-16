@@ -122,6 +122,7 @@ body {
 .rodape-imagem {
   height: 400px;
   display: flex;
+  background: url('https://www.deezer-blog.com/assets/sites/8/2022/09/musica-eletronica.jpg') center center/cover;
   margin: 0 auto;
   list-style: none;
   width: 100%;
