@@ -16,11 +16,11 @@ body {
 }
 #view-code:hover{opacity:1;}
 #chatbox{
-	width:290px;
+	width:400px;
 	background:#fff;
 	border-radius:6px;
 	overflow:hidden;
-	height:484px;
+	height:500px;
 	position:absolute;
 	top:100px;
 	left:50%;
@@ -31,8 +31,8 @@ body {
 	position:absolute;
 	top:0;
 	left:0;
-	width:290px;
-	height:484px;
+	width:400px;
+	height:500px;
 }
 #topmenu{
 	height:69px;
@@ -92,8 +92,8 @@ body {
 .friend .status{
 	background:#26c281;
 	border-radius:50%;	
-	width:9px;
-	height:9px;
+	width:6px;
+	height:6px;
 	position:absolute;
 	top:31px;
 	right:17px;
@@ -109,14 +109,14 @@ body {
 	left:0;
 }
 #searchfield{
-	background:#e3e9ed;
+	background:#C433FF;
 	margin:21px 0 0 55px;
 	border:none;
 	padding:0;
 	font-size:14px;
-	font-family:"Open Sans", sans-serif; 
+	font-family:"Helvetica", sans-serif; 
 	font-weight:400px;
-	color:#8198ac;
+	color:#DABED6;
 }
 #searchfield:focus{
 	 outline: 0;
